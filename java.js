@@ -1,13 +1,33 @@
+var highscores = [];
 
 var timerElement = document.querySelector(".timer-count");
 var startButton = document.querySelector(".start-button");
 var testBtn = document.querySelector("#btn")
 
+var viewScores = document.getElementById("View-scores");
+
+var beginHere = document.getElementById("begin-here");
+var questionStart = document.getElementById("questionstart");
+var question = document.getElementById("question");
+var answer=document.getElementById("answer");
+
+var enterName = document.getElementById("enter-name");
+var display = document.getElementById("display");
+var initial = document.getElementById("initial");
+var initialSubmit = document.getElementById("initial-submit");
+
+var highscore = document.getElementById("highscore");
+var highscoreBox = document.getElementById("highscore-box");
+var back = document.getElementById("back");
+var clear = document.getElementById("clear");
+
+var pageArray = [beginHere, questionStart, question, ]
+
 var timer, timerCount, isWin;
 
 function onclick() {
   isWin = false;
-  timerCount = 20;
+  timerCount = 60;
   // Prevents start button from being clicked when round is in progress
   startButton.disabled = true;
   // renderBlanks()
@@ -15,7 +35,7 @@ function onclick() {
 }
 
 function decreaseTime() {
-  timerCount -= 10
+  timerCount -= 3
 }
 
 function setStateWin() {
