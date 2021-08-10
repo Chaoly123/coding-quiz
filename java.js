@@ -9,7 +9,7 @@ var viewScores = document.getElementById("View-scores");
 var beginHere = document.getElementById("begin-here");
 var questionStart = document.getElementById("questionstart");
 var question = document.getElementById("question");
-var answer=document.getElementById("answer");
+var answer = document.getElementById("answer");
 
 var enterName = document.getElementById("enter-name");
 var display = document.getElementById("display");
@@ -21,9 +21,45 @@ var highscoreBox = document.getElementById("highscore-box");
 var back = document.getElementById("back");
 var clear = document.getElementById("clear");
 
-var pageArray = [beginHere, questionStart, question, ]
+var pageArray = [beginHere, questionStart, question, initial, highscore];
 
 var timer, timerCount, isWin;
+
+
+var questionContent = {
+  question1 = {
+    question: "What does NOT belong in HTML coding?",
+    correct: "function",
+    answerArray: ["body", "header", "div", "fuction"]
+  },
+  question2 = {
+    question: "What does NOT belong in CSS coding?",
+    correct: "div",
+    answerArray: ["body", "header", "div", "fuction"]
+  },
+  question3 = {
+    question: "What does NOT belong in java coding?",
+    correct: "header",
+    answerArray: ["body", "header", "div", "fuction"]
+  },
+  question4 = {
+    question: " What does belong in HTML coding?",
+    correct: "div",
+    answerArray: ["body", "header", "div", "fuction"]
+  },
+  question5 = {
+    question: " What does belong in CSS coding?",
+    correct: "background",
+    answerArray: ["body", "background", "div", "fuction"]
+  },
+  question6 = {
+    question: "What does belong in java coding?",
+    correct: "var",
+    answerArray: ["body", "header", "div", "fuction"]
+  },
+}
+
+
 
 function onclick() {
   isWin = false;
