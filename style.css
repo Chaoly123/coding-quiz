@@ -1,0 +1,65 @@
+/* Main background for the page */
+body {
+    background-color: blueviolet;
+}
+
+/* text color for the HighScores */
+.View-scores {
+    color:yellowgreen;
+}
+
+/* Paragraph color and text-align to the Center of the Page */
+p {
+    color: whitesmoke;
+    text-align: center;
+    font-size: medium;
+    font-style: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Header 1 set to have the text center with the same font  */
+h1 {
+    color: tomato;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+/* header 3 is different by the font color, text-size and font-weight */
+h3 {
+    color: rgb(206, 206, 206);
+    text-align: center;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+
+/* just change the color to black */
+.code {
+    color: black;
+}
+
+/* switching the display into the center instead of being on the left side of screen */
+.quiz {
+    display: flexbox;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.questions {
+    background-color: teal;
+    text-align: center;
+}
+
+/* for the correct answer centered */
+.correct-answer {
+    margin-left: 44%;
+}
+
+.start-button {
+    display: grid;
+    margin-left: 48.5%;
+    background-color: yellowgreen;
+}
