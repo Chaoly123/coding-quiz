@@ -55,7 +55,7 @@ var questionContent = [
 
 ];
 
-const totalPoints = 30;
+let totalPoints = 30;
 const totalQuestionContent = 6;
 
 
@@ -66,9 +66,11 @@ function start() {
 
 function time() {
   let timeInterval = setInterval(function () {
-    if (secoundLeft === 0) {
+    if (secoundLeft === 0 || questionIndex >= questionContent.length) {
       clearInterval(timeInterval);
-      timeEl.textContent = "Out of Time!!!!"
+      timeEl.textContent = "QUIZ OVER!!"
+      document.querySelector("#scoreMenu").setAttribute("style", "display: block;")
+      document.querySelector("#score").textContent = totalPoints
     } else {
       secoundLeft--;
       timeEl.textContent = secoundLeft;
@@ -95,12 +97,12 @@ if (e.srcElement.nodeName == 'BUTTON' && document.getElementById(e.srcElement.id
 if(document.getElementById(e.srcElement.id).textContent === questionContent[questionIndex].correct){
 console.log('CORRECT') 
 textContent = "You are right"
-highscore++;
+totalPoints+= 10;
 questionIndex++;
 getQuestion()
 } else {
 console.log('INCORRECT')
-time -= 3
+secoundLeft -= 3
 questionIndex++;
 getQuestion()
 }
