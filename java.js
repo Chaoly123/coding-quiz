@@ -55,7 +55,7 @@ var questionContent = [
 
 ];
 
-let totalPoints = 30;
+let totalPoints = "";
 const totalQuestionContent = 6;
 
 
@@ -102,7 +102,7 @@ questionIndex++;
 getQuestion()
 } else {
 console.log('INCORRECT')
-secoundLeft -= 3
+secoundLeft -= 10
 questionIndex++;
 getQuestion()
 }
