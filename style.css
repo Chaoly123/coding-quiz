@@ -63,3 +63,9 @@ h3 {
     margin-left: 48.5%;
     background-color: yellowgreen;
 }
+
+.wrapper {
+    margin: 100px auto 0 auto;
+    max-width: 600px;
+  }
+  

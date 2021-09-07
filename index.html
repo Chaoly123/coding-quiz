@@ -13,13 +13,13 @@
     <!-- Top Page -->
     <header>
 
-        <a href="#highscore" id="view-scores">HighScores</a>
+        <a href="Highscores.html" id="view-scores">HighScores</a>
         <div class="time"></div>
         <div class="large-font">Code Quiz Time</div>
 
         <h1 class="code">Lets the Quiz begin</h1>
         <p>Do answer the question before the time runs out</p>
-        <p>For each question you answer wrongfully will be deduct by 3 seconds.</p>
+        <p>For each question you answer wrongfully will be deduct by 10 seconds.</p>
 
         <button class="start-button" id="start-code-btn">Start</button>
 
@@ -41,11 +41,13 @@
 
         <div id="scoreMenu" style="display: none;">
             <h1> Your Score Is: <span id="score"></span></h1>
+            <p>Enter your Name: <input type="text" id="init"/><button id="submit">Submit</button></p>
         </div>
     </main>
   
 
     <script src="./java.js"></script>
+    <script src="./viewhighscores.js"></script>
 </body>
 
 </html>

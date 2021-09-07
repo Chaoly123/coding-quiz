@@ -14,6 +14,8 @@ let answerEl = document.querySelector(".correct-answer");
 let correctEl = "";
 let currentQuestion = questions.length - 1;
 let highscoreEl = document.querySelector("view-scores");
+let initEl = document.getElementById("init");
+let submitBtn = document.getElementById("submit")
 
 var allScore = [];
 // var storeScores = json.parse(localStorage.getItem("userData"));
@@ -109,5 +111,31 @@ getQuestion()
 }
 });
 
+function highscore() {
+  var init = initEl.value.trim();
+   if (init !== "") {
+     var highscore = JSON.parse(window.localStorage.getItem("highscore")) || [];
+
+     var newScore = {
+       score: time,
+       init: init
+     };
+
+     highscore.push(newScore);
+     window.localStorage.setItem("highscore", JSON.stringify(highscore));
+
+     window.location.href = "Highscores.html"
+   }
+}
+
+function checkEnter(event) {
+  if (event.key === "Enter"){
+    highscore();
+  }
+}
+
+submitBtn.onclick = highscore;
+
+initEl.onkeyup = checkEnter; 
 
 startButton.addEventListener("click", start)
